@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <script src="js/jquery.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="img/mug-hot-solid.svg">
+    <title>Kreator-Coffee Sütemények</title>
+  </head>
+
+  <body>
+    <script defer src="js/header.js"></script>
+    <header id="app-header"></header>
+
+    <nav>
+      <div id="brand">
+        <a href="index.html"><img src="img/kreatorIcon.png" alt="Kreator">
+          <img src="img/coffee-bean.svg" height="30px" alt="Coffee">
+        </a>
+      </div>
+
+      <!-- Nav bar -->
+      <div class="menu">
+        <ul>
+          <li><a href="kocsma.html"> Rólunk </a></li>
+          <li><a href="kave.html">Kávéfajták</a></li>
+          <li><a class="active" href="sutik.html">Sütemények</a></li>
+          <li id="connect"><a href="connect.html">Kapcsolat</a></li>
+        </ul>
+      </div>
+      <div id="hamburger-icon" onclick="togglemobilMenu(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <ul class="mobil-menu">
+          <li><a href="kocsma.html"> Rólunk </a></li>
+          <li><a href="kave.html">Kávéfajták</a></li>
+          <li><a class="active" href="sutik.html">Sütemények</a></li>
+          <li id="connect"><a href="connect.html">Kapcsolat</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <h1 class="cim">Süteményeink</h1>
+      <article class="cikk">
+        <figure>
+          <a href="https://metalinjection.net/metal-merch/kreator-makes-coffee-now" target="_blank">
+            <img class="middle" src="img/coffeeLeather.jpg" alt="Coffe'n Metal"></a>
+        </figure>
+        <p>Válassza ki kedvenc kávés süteményét a Kreator Coffeeban kapható több tucatnyi közül. fedezze fel velünk a kávé világát!
+        </p>
+        <hr>
+      </article>
+
+      <!-- - KÁRTYÁK - -->
+      <div class="row">
+        <div class="column">
+          <a href="#muffin">
+            <div class="card">
+              <img src="img/kavesmuffin_k.png" alt="Kávés muffin">
+              <h3>Kávés muffin</h3>
+            </div>
+          </a>
+        </div>
+
+        <div class="column">
+          <a href="#brownie">
+            <div class="card">
+              <img src="img/kavesbrownie_k.png" alt="Kávés brownie">
+              <h3>Kávés brownie</h3>
+            </div>
+          </a>
+        </div>
+
+        <div class="column">
+          <a href="#croissant">
+            <div class="card">
+              <img src="img/kavescroissant_k.png" alt="Kávés croissant">
+              <h3>Kávés croissant</h3>
+            </div>
+          </a>
+        </div>
+
+        <div class="column">
+          <a href="#suti">
+            <div class="card">
+              <img src="img/kavessuti_k.png" alt="Kávés süti">
+              <h3>Kávés süti</h3>
+            </div>
+          </a>
+        </div>
+
+        <div class="column">
+          <a href="#tiramisu">
+            <div class="card">
+              <img src="img/tiramisu_k.png" alt="Tiramisu">
+              <h3>Tiramisu</h3>
+            </div>
+          </a>
+        </div>
+
+        <div class="column">
+          <a href="#churros">
+            <div class="card">
+              <img src="img/kaves-churros.jpg" alt="Kávés churros">
+              <h3>Kávés churros</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!------------- MODALOK ------------------->
+    <div id="muffin" class="overlay">
+      <div class="popup">
+        <div class="header">
+          <h2>Káves muffin</h2>
+          <a class="close" onclick="history.go(-1)">&times;</a>
+        </div>
+        <div class="content">
+          <img src="img/kavesmuffin_k.png" alt="Káves muffin">
+          <p>A csokis-kávés muffin igazán feldob az unalmas, fárasztó hétköznapokon, hisz a fő összetevők külön-külön is
+            élénkítenek. Nem kell sokat változtatni az egyszerű csokismuffin-alaprecepten. Villámgyorsan összeállíthatod,
+            és attól sem kell tartanod, hogy a tészta másnapra kiszárad. A süti tetejére néhány kávészemet is szórhatsz.
+          </p>
+          <div class="jobbra">
+            <a href="https://cookpad.com/hu/kereses/k%C3%A1v%C3%A9s%20muffin" target="_blank">
+              <button class="button"><span>Itt található a recept </span></button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div id="croissant" class="overlay">
+      <div class="popup">
+        <div class="header">
+          <h2>Kávés croissant</h2>
+          <a class="close" onclick="history.go(-1)">&times;</a>
+        </div>
+        <div class="content">
+          <img src="img/kavescroissant_k.png" alt="Kávés croissant">
+          <p>Manapság már itthon is annyira általános, hogy bele se gondolunk, vajon honnan származik ez a könnyű, ropogós
+            péksütemény.</p>
+          <p> A croissant története nem ismert, több mese is fennmaradt a sütemény első készítéséről. Az azonban biztos,
+            hogy először Bécsben készítettek, a török ostrom leverésének ünneplésekor, a hold alak pedig a törökök</p>
+          <div class="jobbra">
+            <a href="http://zabszolutegeszseges.hu/recipe/csokis-kaves-croissant/" target="_blank">
+              <button class="button"><span>Itt található a recept </span></button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div id="tiramisu" class="overlay">
+      <div class="popup">
+        <div class="header">
+          <h2>Tiramisu</h2>
+          <a class="close" onclick="history.go(-1)">&times;</a>
+        </div>
+        <div class="content">
+          <img src="img/tiramisu_k.png" alt="Tiramisu">
+          <p>A tiramisu olasz desszert, amely az eredeti recept szerint az alábbiakból készül: babapiskóta, tojássárgája,
+            feketekávé, mascarpone sajt, cukor, és kakaópor. A tirami sù olasz kifejezés átvitt értelmű jelentése „dobj
+            fel”, ami a két koffeintartalmú összetevőre utal: a presszókávéra és a kakaóra. Az eredeti receptben nincs
+            tojásfehérje vagy alkohol.</p>
+          <div class="jobbra">
+            <a href="https://receptvadasz.hu/tokeletes-olasz-tiramisu-percek-alatt-egyszeru-es-mennyei/" target="_blank">
+              <button class="button"><span>Itt található a recept </span></button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="suti" class="overlay">
+      <div class="popup">
+        <div class="header">
+          <h2>Kávés süti</h2>
+          <a class="close" onclick="history.go(-1)">&times;</a>
+        </div>
+        <div class="content">
+          <img src="img/kavessuti_k.png" alt="Kávés süti">
+          <p>A reggel el sem indulhat egy egy finom, aromás eszpresszó, kapucsínó vagy hosszú kávé nélkül? Ha nemcsak
+            folyékony formában szereti a kávét, hanem fagylaltokban vagy süteményekben is, válogasson kávés finomságaink
+            közül. Süssön kávés szeletet, muffint, piskótát, kávékrémes tortát; és teljessé teheti nemcsak a reggelit,
+            hanem az ebédet is.</p>
+          <div class="jobbra">
+            <a href="https://cookpad.com/hu/receptek/13777284-kaves-suti" target="_blank">
+              <button class="button"><span>Itt található a recept </span></button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div id="brownie" class="overlay">
+      <div class="popup">
+        <div class="header">
+          <h2>Kávés brownie</h2>
+          <a class="close" onclick="history.go(-1)">&times;</a>
+        </div>
+        <div class="content">
+          <img src="img/kavesbrownie_k.png" alt="Kávés brownie">
+          <p>A brownie önmagában is lenyűgöző desszert, hát még élénkítő kávéval! Még lágyabb lesz tőle a tészta.</p>
+          <div class="jobbra">
+            <a href="https://www.topreceptek.hu/recept/kaves-brownie-fotokkal-r169" target="_blank">
+              <button class="button"><span>Itt található a recept </span></button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div id="churros" class="overlay">
+      <div class="popup">
+        <div class="header">
+          <h2>Kávés churros</h2>
+          <a class="close" onclick="history.go(-1)">&times;</a>
+        </div>
+        <div class="content">
+          <img src="img/kaves-churros.jpg" alt="Kávés churros">
+          <p>A churro vagy churros, amit Magyarországon spanyol fánkként is ismerünk, spanyol édesség: sült
+            tésztarudacskák cukorba mártogatva. A churros egy liszt alapú, forró olajban kisütött tészta, amit gyakran a,
+            frutas de sartén” nevű ételek közé sorolnak.</p>
+          <div class="jobbra">
+            <a href="https://cookpad.com/hu/receptek/14173557-kaves-csesze-churros" target="_blank">
+              <button class="button"><span>Itt található a recept </span></button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script defer src="js/footer.js"></script>
+    <footer id="app-footer"></footer>
+
+    <script src="js/script.js"></script>
+  </body>
+
+</html>

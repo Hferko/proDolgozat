@@ -1,0 +1,278 @@
+@font-face {
+    font-family: Oxanium;
+    src: url(Oxanium-Regular.ttf);
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Oxanium', cursive;
+    color: #777;
+}
+
+h1{
+  text-align: center;
+  color: aqua;  
+  margin-top: 0px;
+  padding-top: 10px;  
+  background-color: rgba(119, 61, 34, 0.6);
+  animation-name: szinez;
+  animation-duration: 5s; 
+}
+
+@keyframes szinez {
+    from {color: teal;}
+    to {color: aqua;}
+}
+
+h3 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-family: 'Oxanium', cursive;
+    color: #111;
+    text-align: center;
+}
+
+h4{
+  text-align: center;
+  color: maroon;
+}
+
+/*--- Menü --- */
+nav {
+    width: 97%;
+    /*margin-right: 10%;*/
+}
+
+#hamburger-icon div {
+    margin-right: 20px;
+}
+
+.mobil-menu li {
+    background-color: #502916;
+}
+/* Eddig a menü*/
+/* -- KÉPEK ---*/
+.bgimg-1,
+.bgimg-2,
+.bgimg-3 {
+    position: relative;
+    /*opacity: 0.65;*/
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bgimg-1 {
+    background-image: url("../img/kavezo.jpg");
+    min-height: 100%;
+}
+
+.bgimg-2 {
+    background-image: url("../img/kavezo2.jpg");
+    min-height: 400px;
+}
+
+.bgimg-3 {
+    background-image: url("../img/coffee.jpg");
+    min-height: 400px;
+}
+
+/* --- Cikkek ---- */
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+
+.caption span.border {
+    background-color: rgba(119, 61, 34, 0.6);
+    color: #fff;
+    padding: 18px;
+    font-size: 10px;
+    letter-spacing: 10px;
+    border: 1px solid wheat;
+    border-radius: 8px;
+    position: relative;    
+    left: 100vw;
+    /*opacity:0;*/    
+}
+
+.border a{
+    text-decoration: none;
+    color: white;
+}
+.border a:hover{    
+    color: aqua;
+    text-shadow: 2px 2px blue;
+    transition: 0.6s;
+}
+
+
+article.elso{
+    color: #444;
+    background-color:white;
+    /*text-align:center;*/
+    padding: 30px 60px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+article.masodik{
+    color:#ddd;
+    background-color:#282E34;
+    /*text-align:center;*/
+    padding: 30px 60px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+article p.jobbra{
+    text-align: right;
+    font-style: italic;
+    color: blue;
+}
+
+/* Kikapcsolja a parallax scrollozást tableten és oktalan telefonon */
+@media only screen and (max-device-width: 768px) {
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+@media only screen and (max-width: 768px) {    
+    .caption span.border{
+        font-size: 3vw;
+        padding: 5px;        
+    }
+    nav{
+      width: 94%;
+    }
+    h3{
+      font-size: 3vw;
+    }
+    article.elso, article.masodik{
+      padding: 20px 5%;
+    }
+}
+
+footer{
+  /*position: absolute;*/
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #111;
+  height: auto;  
+  padding-top: 10px;
+  color: #fff;
+  width: 100%;
+}
+
+.footer-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 2px;
+}
+
+.footer-content h3{  
+  text-transform: capitalize;
+  line-height: 1.4;
+  color: #fff;
+}
+
+.footer-content p{
+  max-width: 500px;
+  margin: 5px auto;
+  line-height: 1.2;
+  font-size: 0.9em;
+  color: #cacdd2;
+}
+
+.socials{
+  list-style: none; 
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 1rem 0;
+}
+
+.socials li{
+  margin: 0 10px;
+  display: inline-block;  
+}
+
+.socials a{
+  text-decoration: none;  
+  padding: 5px;  
+}
+
+.socials img{  
+  width: 25px;
+  margin-bottom: -2px;
+  transition: color .4s ease;  
+}
+
+.footer-bottom{
+  background: #000;
+  width: 97%;
+  padding-left: 20px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.footer-bottom p{
+  float: left;
+  font-size: 0.9em;
+  word-spacing: 2px;
+  text-transform: capitalize;
+  background-color: #000;  
+}
+.footer-bottom p a,
+.footer-content p a
+{
+ color:#44bae8;
+ font-size: 1em;
+ text-decoration: none;
+}
+.footer-bottom span{
+   text-transform: uppercase;
+   opacity: .4;
+   font-weight: 200;
+}
+
+@media only screen and (max-width: 900px){
+  footer.socials{
+    width: 300px;
+  }
+  footer .socials li {
+    color: aqua;
+    display: block;
+  }
+}
+
+.inicial{
+  font-size: 2em;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: teal;
+  text-shadow: 2px 2px turquoise;
+}
+
+div.foldhozragadt {
+    position:          fixed;
+    bottom:            2px;
+    right:             10px;
+    width:             25px;  
+}
+div.foldhozragadt:hover{
+    /*background-color:  white;*/
+    border-radius:     10px;
+    border-bottom: 3px solid blue;
+}

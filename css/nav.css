@@ -1,0 +1,145 @@
+
+nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav {
+    padding: 0 20px;
+    background-color: #502916;                
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+#brand {
+    font-weight: bold;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+}
+
+#brand a {
+    color: aqua;
+    padding: 5px 5px;
+}
+
+nav ul {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+nav ul a {
+    color: white;
+    padding: 15px 5%;
+}
+
+nav ul a.active, nav div.active {
+    background: maroon;
+    border-radius: 8px;
+}
+
+nav ul a:hover,
+#brand:hover {
+    background: chocolate;
+    border-radius: 8px;    
+}
+
+ul li {
+    padding: 15px;
+    margin-left: 10px;
+}
+
+ul li:hover {
+    transform: scale(1.1);
+    transition: 0.4s;
+}
+
+#connect {
+    border-radius: 5px;
+    padding: 5px 8px;
+    margin-right: 6px;    
+}
+
+#connect a {
+    color: aqua;
+}
+
+#hamburger-icon {
+    margin: auto 0;
+    display: none;
+    cursor: pointer;
+}
+
+#hamburger-icon div {
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.nyit .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.nyit .bar2 {
+    opacity: 0;
+}
+
+.nyit .bar3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.nyit .mobil-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.mobil-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    height: calc(100vh - 50px);
+    width: 100%;   
+}
+
+.mobil-menu li {
+    margin-bottom: 5px;
+    padding: 8px;    
+    background-color: peru;
+}
+
+.mobil-menu a {
+    padding: 5px 15px;
+}
+
+@media only screen and (max-width: 740px) {
+    nav .menu {
+        display: none;
+    }
+
+    #hamburger-icon {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 220px) {
+    #brand img {
+        display: none;
+    }   
+}

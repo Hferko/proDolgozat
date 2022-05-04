@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/slider.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <script src="js/jquery.min.js"></script>
+  <link rel="icon" type="image/x-icon" href="img/mug-hot-solid.svg">
+  <title>Kreator-Coffee Kávék</title>
+</head>
+
+<body>
+  <script defer src="js/header.js"></script>
+  <header id="app-header"></header>  
+
+  <nav>
+    <div id="brand">
+      <a href="index.html"><img src="img/kreatorIcon.png" alt="Kreator">
+        <img src="img/coffee-bean.svg" height="30px" alt="Coffee">
+      </a>
+    </div>
+
+    <!-- Nav bar -->
+    <div class="menu">
+      <ul>
+        <li><a href="kocsma.html"> Rólunk </a></li>
+        <li><a class="active" href="kave.html">Kávéfajták</a></li>
+        <li><a href="sutik.html">Sütemények</a></li>
+        <li id="connect"><a href="connect.html">Kapcsolat</a></li>
+      </ul>
+    </div>
+    <div id="hamburger-icon" onclick="togglemobilMenu(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+      <ul class="mobil-menu">
+        <li><a href="kocsma.html"> Rólunk </a></li>
+        <li><a class="active" href="kave.html">Kávéfajták</a></li>
+        <li><a href="sutik.html">Sütemények</a></li>
+        <li id="connect"><a href="connect.html">Kapcsolat</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main>
+    <h1 class="cim">Kávéfajtáink</h1>
+    <article>
+      <figure>
+        <img class="balra" src="img/TheBarn-Kreator.jpg" alt="Black Sunrise Coffee">
+        <img class="jobbra" src="img/KreatorCoffee.jpg" alt="Black Sunrise Coffee">
+      </figure>
+      <p> <b class="inicial">A</b> német thrash legendák, a Kreator új keverékével, a Black Sunrise-val ártja bele magát
+        a kávéüzletbe.
+        A német pörkölőkkel együttműködő The Barn, Black Sunrise sima és csokis ízű babot hoz át Brazíliából.
+      </p>
+      <p>A zenekar így nyilatkozott: „Örömmel jelentjük be együttműködésünket Németország legjobb kávépörkölőivel, a The
+        Barnnal."
+        Ha ellátogatott valamelyik helyszínükre Berlinben, megértheti, miért választottuk őket a Kreator képviseletére -
+        kiváló minőség és nagyszerű ízek.</p>
+      <p>"Brazília az egyik kedvenc helyünk a világon, és ez előtt szerettünk volna tisztelegni ezzel a finoman sima és
+        csokis kínálattal."
+      </p>
+      <p>
+        A berlini The Barn-nel közösen készített Black Sunrise Coffee egy sötét pörkölt eszpresszó,
+        amelyet a brazíliai Cerrado Mineiróban termesztenek, és Németországban pörkölik.
+      </p>
+      <h3>Ébredjen a „Black Sunrise”-ra!” </h3>
+    </article>
+    <hr>
+    <!-- - KÁRTYÁK - -->
+    <div class="row">
+      <div class="column">
+        <a href="#espresso">
+          <div class="card">
+            <img src="img/kave-min.png" alt="Espresso">
+            <h3>Espresso</h3>
+          </div>
+        </a>
+      </div>
+
+      <div class="column">
+        <a href="#americano">
+          <div class="card">
+            <img src="img/americano.png" alt="Americano">
+            <h3>Americano</h3>
+          </div>
+        </a>
+      </div>
+
+      <div class="column">
+        <a href="#cappuccino">
+          <div class="card">
+            <img src="img/capuccino.png" alt="Cappuccino">
+            <h3>Cappuccino</h3>
+          </div>
+        </a>
+      </div>
+
+      <div class="column">
+        <a href="#macchiato">
+          <div class="card">
+            <img src="img/latte.png" alt="Latte Macchiato">
+            <h3>Latte Macchiato</h3>
+          </div>
+        </a>
+      </div>
+
+      <div class="column">
+        <a href="#melange">
+          <div class="card">
+            <img src="img/melange.jpg" alt="Melange">
+            <h3>Melange</h3>
+          </div>
+        </a>
+      </div>
+
+      <div class="column">
+        <a href="#frappuccino">
+          <div class="card">
+            <img src="img/frapuccino.jpg" alt="Frappuccino">
+            <h3>Frappuccino</h3>
+          </div>
+        </a>
+      </div>
+  </main>
+  <!------------- MODALOK ------------------->
+  <div id="espresso" class="overlay">
+    <div class="popup">
+      <div class="header">
+        <h2>Espresso</h2>
+        <a class="close" onclick="history.go(-1)">&times;</a>
+      </div>
+      <div class="content">
+        <img src="img/kave-min.png" alt="Espresso">
+        <p>Ez az olasz "alapkávé", a kis fekete, minden további kávéspecialitás alapja. Általában a csésze
+          kétharmadáig
+          öntik az eszpresszót, vagyis egy adag körülbelül 30-35 milliliter. Sötétbarna színű, krémes ital, habos
+          felső
+          réteggel.</p>
+        <p>A valódi olasz espresso készítéséhez 7 gramm őrölt kávét használunk fel, ami 90 fokos vízzel készül 9 bar
+          nyomáson, és 20-25 másodpercig csapoljuk. A kész kávé 25-30 ml, és állandó kísérője a tetején képződő
+          bársonyos hab, a crema. Az olaszoknál az espresso klasszikus fekete kávé, tehát magában, tej és cukor
+          nélkül
+          isszák.</p>
+        <div class="jobbra">
+          <a href="https://businessandcafe.blog.hu/2015/10/25/a_barista_valaszol_mi_a_tokeletes_espresso_10_titka"
+            target="_blank">
+            <button class="button"><span>Tudj meg többet </span></button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="americano" class="overlay">
+    <div class="popup">
+      <div class="header">
+        <h2>Americano</h2>
+        <a class="close" onclick="history.go(-1)">&times;</a>
+      </div>
+      <div class="content">
+        <img src="img/americano.png" alt="Americano">
+        <p>Az americanot hosszú pohárban, nagyobb csészében tálalják, a hozzáadott víz mennyisége nagyon változó:
+          lehet
+          akár 470 ml is. Amerikából származó kávé típus, ami őshazájában filteres kávéfőzőben készül el, minden
+          esetben
+          egy híg, vizes kávét kapunk végeredményként.</p>
+        <p>Európában az elkészítése azonban teljesen másképp zajlik az eredeti recepthez képest: nálunk ha egy
+          kávézóban, ha Ön americanot rendel, akkor a kívánt eredményt úgy érik el, hogy a presszó kávét felöntik
+          forró
+          vízzel.</p>
+        <div class="jobbra">
+          <a href="https://baristaakademia.hu/americano-filter-kave-hosszu-kave-barista-tanfolyam/" target="_blank">
+            <button class="button"><span>Tudj meg többet </span></button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="cappuccino" class="overlay">
+    <div class="popup">
+      <div class="header">
+        <h2>Cappuccino</h2>
+        <a class="close" onclick="history.go(-1)">&times;</a>
+      </div>
+      <div class="content">
+        <img src="img/capuccino.png" alt="Cappuccino">
+        <p>A capuccino-ról sokan azt hiszik, hogy Olaszországból ered, pedig kapuzíner néven Ausztriában már 200
+          évvel
+          ezelőtt is jellegzetes kínálata volt a kávéházaknak. Az osztrák kávéféle Olaszországban a 20. században
+          terjedt el, tipikus reggeli ital, amelyet Itáliában péksütemények mellé fogyasztanak.</p>
+        <p>Az olasz capuccio szó csuklyát jelent, ami a latin caputium szóból ered, a Szent Ferenc által inspirált
+          szerzetesi öltözetre utal. Az olaszoknál a cappuccino-nak külön, erre a kávé típusra tervezett pohara van.
+          Ezt
+          a kávét úgy készítik el, hogy az eszpresszóhoz felhabosított tejet adnak, a kávé pedig az arányoktól lesz
+          gyengébb, krémesebb hatású: az ⅓ presszó és ⅔ tejhab arány lesz itt a mérvadó.</p>
+        <div class="jobbra">
+          <a href="https://kavehazmagazin.hu/barista-tanacs-latte-cappuccino/" target="_blank">
+            <button class="button"><span>Tudj meg többet </span></button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="macchiato" class="overlay">
+    <div class="popup">
+      <div class="header">
+        <h2>Latte Macchiato</h2>
+        <a class="close" onclick="history.go(-1)">&times;</a>
+      </div>
+      <div class="content">
+        <img src="img/latte.png" alt="Latte Macchiato">
+        <p>A Latte Macchiato jelentése festett tej. Elkészítéséhez egy magasabb pohárra van szükség, amibe előbb a
+          lágyan gőzölt tejhabot kell önteni addig, amíg szinte teljesen meg nem telik. Ezután 1-2 percet várni
+          kell,
+          hogy ülepedjen a tej, majd vékony sugárban bele kell csurgatni egy adag eszpersszót. Az eredmény egy
+          réteges
+          ital lesz: alul forró tej, felette egy intenzív eszpresszó, majd a lágy tejhab. </p>
+        <div class="jobbra">
+          <a href="http: //www.gaggia.hu/latte-macchiato-keszites" target="_blank">
+            <button class="button"><span>Tudj meg többet </span></button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="melange" class="overlay">
+    <div class="popup">
+      <div class="header">
+        <h2>Melange</h2>
+        <a class="close" onclick="history.go(-1)">&times;</a>
+      </div>
+      <div class="content">
+        <img src="img/melange.jpg" alt="Melange">
+        <p>A melange tulajdonképpen egy latte macchiatonak felel meg mézzel kiegészítve, ebben az esetben a
+          kávéscsésze
+          aljába egy réteg méz kerül édesítőként.
+          Ha azonban az eredeti, úgynevezett bécsi kávé változatát választja, akkor az nem tartalmaz mézet, az kávé
+          és
+          tej fele-fele arányú keveréke a tetején tejhabbal. Ehhez először felhabosítanak 1 deciliter tejet, és
+          főznek
+          hozzá egy erős kávét. Következő lépésként egy átlátszó, hőálló pohárba töltenek hideg tejet, majd
+          rákanalazzák
+          a tejhabot. Ezután a tűzforró kávét lassan csurgatják bele, így háromrétegű kávét kapnak.
+        </p>
+        <p>A melange főleg Ausztriában, Svájcban és Hollandiában népszerű. Az eredeti melange a bécsi kávéházakban
+          terjedt el az 1700-as években, ahol bécsi pörkölésű kávéból készítették: Bécsen kívül a mai napig gyakran
+          használják rá a 'Wiener Melange' kifejezést.</p>
+        <div class="jobbra">
+          <a href="https://gourmetchef.blog.hu/2017/04/25/melange_kave" target="_blank">
+            <button class="button"><span>Tudj meg többet </span></button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="frappuccino" class="overlay">
+    <div class="popup">
+      <div class="header">
+        <h2>Frappuccino</h2>
+        <a class="close" onclick="history.go(-1)">&times;</a>
+      </div>
+      <div class="content">
+        <img src="img/frapuccino.jpg" alt="Frappuccino">
+        <p>A frappuccino nevet a Starbucks alkotta meg, a frappét és a cappuccinót ötvözte. Noha az eredeti recept
+          titkos, egy kis kísérletezéssel könnyen el tudod találni a tökéletes ízvilágot és arányokat. Remek ital,
+          ami
+          hűsít és felpörget. Az alapreceptet kedvedre ízesítheted. Karamell helyett kipróbálhatod csokival, eperrel
+          is,
+          de a jeges kávédnak csak a képzeleted szabhat határt. </p>
+        <p>Egy eszpresszót jól el kell keverni folyékony tejszínnel és cukorral, majd az így kapott italt lehűteni
+          és
+          üvegpohárba önteni. Ha igazán hűsítő italra vágysz, még jégkockákat is tehetsz bele. </p>
+        <div class="jobbra">
+          <a href="https://femina.hu/recept/hazi-frappuccino/" target="_blank">
+            <button class="button"><span>Tudj meg többet </span></button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script defer src="js/footer.js"></script>
+  <footer id="app-footer"></footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

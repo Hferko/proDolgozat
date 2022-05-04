@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/slider.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <link rel="icon" type="image/x-icon" href="img/mug-hot-solid.svg">
+  <title>Kreator-Coffee Kapcsolat</title>
+</head>
+
+<body>
+  <script defer src="js/header.js"></script>
+  <header id="app-header"></header>
+
+  <nav>
+    <div id="brand">
+      <a href="index.html"><img src="img/kreatorIcon.png" alt="Kreator">
+        <img src="img/coffee-bean.svg" height="30px" alt="Coffee">
+      </a>
+    </div>
+    <!-- Nav bar -->
+    <div class="menu">
+      <ul>
+        <li><a href="kocsma.html"> Rólunk </a></li>
+        <li><a href="kave.html">Kávéfajták</a></li>
+        <li><a href="sutik.html">Sütemények</a></li>
+        <li id="connect"><a class="active" href="connect.html">Kapcsolat</a></li>
+      </ul>
+    </div>
+    <div id="hamburger-icon" onclick="togglemobilMenu(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+      <ul class="mobil-menu">
+        <li><a href="kocsma.html"> Rólunk </a></li>
+        <li><a href="kave.html">Kávéfajták</a></li>
+        <li><a href="sutik.html">Sütemények</a></li>
+        <li id="connect"><a class="active" href="connect.html">Kapcsolat</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div id="foglal"></div>
+  <main>
+    <h1 class="cim">Asztlafoglalás</h1>
+    <article class="cikk">
+      <fieldset>
+        <legend>
+          <h4>A pirossal jelzett mezők kitöltése fontos, ne hagyja ki</h4>
+        </legend>
+        <form id="basic-form" action="" method="post">
+          <div class="sor">
+            <div class="bal_oszlop">
+              <label for="name">Név a foglaláshoz:</label>
+            </div>
+            <div class="jobb_oszlop">
+              <input type="text" id="name" name="name" placeholder="Ide kérjük becses nevét.." required>
+            </div>
+          </div>
+
+          <div class="sor">
+            <div class="bal_oszlop">
+              <label for="email">E-mail cím: </label>
+            </div>
+            <div class="jobb_oszlop">
+              <input type="email" id="email" name="email" placeholder="glazser.bozso@webmuvek.com" required>
+              <span class="validity"></span>
+            </div>
+          </div>
+
+          <div class="sor">
+            <div class="bal_oszlop">
+              <label for="person">Hány főre óhajt foglalni?</label>
+            </div>
+            <div class="jobb_oszlop">
+              <input type="number" id="person" name="person" step="1" min="1" max="40" required>
+              <span class="validity"></span>
+            </div>
+          </div>
+
+          <div class="sor">
+            <div class="bal_oszlop">
+              <label for="datum">Mely napra szeretne asztalt foglalni:</label>
+            </div>
+            <div class="jobb_oszlop">
+              <input type="date" id="datum" name="datum" min="2022-01-02" required>
+              <span class="validity"></span>
+            </div>
+          </div>
+
+          <div class="sor">
+            <div class="bal_oszlop">
+              <label for="ido">Érkezésének várható időpontja:</label>
+            </div>
+            <div class="jobb_oszlop">
+              <input type="time" id="ido" name="ido" required>
+              <span class="validity"></span>
+            </div>
+          </div>
+
+          <div class="sor">
+            <div class="bal_oszlop">
+              <label for="phone">Telefonszám, ahol vissza tudjuk hívni:</label>
+            </div>
+            <div class="jobb_oszlop">
+              <input type="tel" id="phone" name="phone" pattern="[0-9]{2}-[0-9]{2}-[0-9]{7}"
+                placeholder="pl.: 36-30-4367829">
+            </div>
+          </div>
+          <p>Kérjük telefonszám esetén ezt a formát kövesse: 36-30-4367829</p>
+          <div>
+            <div class="sor">
+              <div class="bal_oszlop">
+                <label for="megjegy">Egyéb kapcsolódó kérés:</label>
+              </div>
+              <div class="jobb_oszlop">
+                <textarea id="megjegy" name="megjegy" placeholder="Üzenet a számunkra ..."
+                  style="height:100px"></textarea>
+              </div>
+            </div>
+
+            <input class="gomb" type="reset" value="Törlés">
+          </div>
+        </form>
+        <button class="gomb" id="modal_btn">Foglalom az asztalt</button>
+      </fieldset>
+    </article>
+
+    <!-- MODAL -->
+    <div class="modal" id="modal1">
+      <div class="modal-content">
+        <div class="modal-header">
+
+          <span class="shut">Rendben <span style="font-size: 1.2em;"> &nbsp;&#10008;</span></span>
+          <h3>A foglalás adatai</h3>
+        </div>
+        <div class="modal-body">
+          <div class="sor" id="reserve">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="button" id="torol"><span>Javítom az adatokat </span></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="modal2">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="shut">&#10008;</span>
+        </div>
+        <div class="modal-body">
+          <img src="img/map.jpg" alt="Kávézónk a térképen" style="width: 100%; height: auto;">
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          $('#mako').each(function (i) {
+            let bottom_of_border = $(this).offset().top + $(this).outerHeight() / 3;
+            let bottom_of_window = $(window).scrollTop() + $(window).height();
+
+            if (bottom_of_window > bottom_of_border) {
+              $(this).animate({ left: '0' }, 1000);
+              $(this).animate({ fontSize: '1.4vw' }, 1000);
+            }
+          });
+        });
+      });
+
+      let ma = new Date();
+      let dd = ma.getDate();
+      let mm = ma.getMonth() + 1;
+      let yyyy = ma.getFullYear();
+      if (dd < 10) {
+        dd = '0' + dd
+      }
+      if (mm < 10) {
+        mm = '0' + mm
+      }
+      ma = yyyy + '-' + mm + '-' + dd;
+      document.getElementById("datum").setAttribute("min", ma);
+      function postaz() {
+        let cimke = ["Név:", "E-mail cím:", "Személyek száma:", "Ezen a napon:", "Érkezésének időpontja:", "Az ön telefonszáma:", "Üzenete:"];
+        let adat = [];
+        adat.push(document.getElementById("name").value);
+        adat.push(document.getElementById("email").value);
+        adat.push(document.getElementById("person").value);
+        adat.push(document.getElementById("datum").value);
+        adat.push(document.getElementById("ido").value);
+        adat.push(document.getElementById("phone").value);
+        adat.push(document.getElementById("megjegy").value);
+        console.log(adat);
+        for (let i = 0; i < cimke.length; i++) {
+          if (adat[i] == "") {
+            $("#reserve").append("<div class='bal_oszlop'><p>" + cimke[i] + "</p></div><div class='jobb_oszlop'><p> Nem adta meg </p></div>");
+          }
+          else {
+            $("#reserve").append("<div class='bal_oszlop'><p>" + cimke[i] + "</p></div><div class='jobb_oszlop'><p>" + adat[i] + "</p></div>");
+          }
+        }
+      };
+
+      $(document).ready(function () {
+        $("#basic-form").validate({
+          errorClass: "error fail-alert",
+          validClass: "valid success-alert",
+          rules: {
+            name: {
+              required: true,
+              minlength: 3
+            },
+            email: {
+              required: true,
+              email: true
+            },
+            person: {
+              required: true,
+              number: true,
+              min: 1
+            },
+            datum: {
+              required: true,
+              date: true
+            },
+            ido: {
+              required: true
+            }
+          },
+          messages: {
+            name: {
+              minlength: "A név legalább 3 karakterből álljon"
+            },
+            email: {
+              email: "Az e-mail cím formája: abc@domain.tld",
+              required: "Fontos az Ön e-mail címe",
+            },
+            person: {
+              required: "Adja meg a vendégek számát",
+              number: "Kérjük egy számot adjon meg",
+              min: "Hány fő érkezik?"
+            },
+            datum: {
+              required: "Mely napon szeretné lefogalni az asztalt?",
+              date: "Kérjük jelólje meg a dátumot"
+            },
+            ido: {
+              required: "Kérjük adja meg az érkezés idejét is"
+            }
+          }
+        });
+        $("#modal_btn").click(function () {
+          $("#modal1").addClass("active");
+          postaz();
+        });
+
+        $(".shut").click(function () {
+          $("#modal1").removeClass("active");
+          document.getElementById("reserve").innerHTML = "";
+          document.getElementById("basic-form").reset();
+        });
+
+        $("#torol").click(function () {
+          $("#modal1").removeClass("active");
+          document.getElementById("reserve").innerHTML = "";
+        });
+
+        $("#terkep").click(function () {
+          $("#modal2").addClass("active");
+        });
+
+        $(".shut").click(function () {
+          $("#modal2").removeClass("active");
+        });
+      });
+    </script>
+
+    <hr>
+    <h2>Elérhetőségünk</h2>
+
+    <article class="cikk" id="mako" style=" position: relative; left: 100vw;">
+      <p>Keressen fel minket itt...</p>
+      <figure>
+        <a href="https://szallas.hu/programok/mako" target="_blank">
+          <img class="middle" src="img/mako2.jpg" alt="Makó"></a>
+      </figure>
+    </article>
+
+    <div class="row">
+      <div class="column">
+        <a href="https://kozelestavol.hu/a-mi-kis-falunk-pajkaszeg-latnivaloi/" target="_blank">
+          <div class="card">
+            <img src="img/kavezo.jpg" class="kep" alt="Kreator Coffee">
+            <h3><b>Postacím</b></h3>
+            <p><b>2508. Pajkaszeg</b></p>
+            <p><b>Hunyadi utca 112.</b></p>
+          </div>
+        </a>
+      </div>
+
+      <div class="column">
+        <div class="card" id="terkep">
+          <img src="img/map.jpg" class="kep" alt="Kávézónk a térképen">
+          <h3><b>GPS adatok</b></h3>
+          <p><b>Szélesség: 46.2137</b></p>
+          <p><b>Hosszúság: 20.4755</b></p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <img src="img/old-phone.png" class="kep" alt="Telfonszámunk">
+          <h3><b>Telefonon</b></h3>
+          <p><b>Számunk: </b></p>
+          <p><b>+36 30 444 55 66</b></p>
+        </div>
+      </div>
+    </div>
+    <article class="doboz">
+      <h4 id="mailCim">E-mail címünk:&nbsp; kreator.coffee<img src="img/email.svg" style="width: 25px;">acme.com </h4>
+    </article>
+    <article class="doboz">
+      <h4>Vagy írjon nekünk közvetlenül üzenetet:</h4>
+      <form action="mail.php" method="post">
+        <div class="middle">
+          <input type="text" id="neve" name="neve" placeholder="Az ön neve">
+        </div>
+        <div class="middle">
+          <input type="email" id="emil" name="emil" placeholder="Az ön e-mail címe">
+        </div>
+
+        <div class="middle">
+          <input type="text" id="subject" name="subject" placeholder="Az üzenet tárgya">
+        </div>
+        <div class="middle">
+          <textarea id="message" name="message" placeholder="Az ön üzenete " style="height:100px"></textarea>
+        </div>
+        <input class="gomb" type="submit" value="Elküldés">
+      </form>
+    </article>
+    <article class="doboz">
+      <h2>Elérhető szolgáltatásaink</h2>
+      <ul class="socials">
+        <li><img class="service" src="img/room-service.png"><br>Vendéglátás</li>
+        <li><img class="service" src="img/buffet.png"><br>Büfé</li>
+        <li><img class="service" src="img/air-conditioner.png"><br>Légkondícionálás</li>
+        <li><img class="service" src="img/chair.png"><br>Kerthelység</li>
+        <li><img class="service" src="img/free-parking.png"><br>Saját parkoló</li>
+        <li><img class="service" src="img/wifi.png"><br>WiFi</li>
+        <li><img class="service" src="img/champagne.png"><br>Rendezvények</li>
+    </ul>
+    </article>
+    <!--
+    <article class="doboz">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2760.696476550479!2d20.474787815100004!3d46.21649269095164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x474458a7f7215e29%3A0xdf05bff055a9927f!2sFigyi%20Coffee%20Mak%C3%B3!5e0!3m2!1shu!2shu!4v1651688552096!5m2!1shu!2shu" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </article>-->
+  </main>
+  <script defer src="js/footer.js"></script>
+  <footer id="app-footer"></footer>
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

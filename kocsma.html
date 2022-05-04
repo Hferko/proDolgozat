@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jcarousel.responsive.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript" src="js/jcarousel.responsive.js"></script>
+    <link rel="icon" type="image/x-icon" href="img/mug-hot-solid.svg">
+    <title>Kreator-Coffee Bar</title>
+  </head>
+
+  <body>
+    <script defer src="js/header.js"></script>
+    <header id="app-header"></header>
+
+    <nav>
+      <div id="brand">
+        <a href="index.html"><img src="img/kreatorIcon.png" alt="Kreator">
+          <img src="img/coffee-bean.svg" height="30px" alt="Coffee">
+        </a>
+      </div>
+
+      <!-- Nav bar -->
+      <div class="menu">
+        <ul>
+          <li><a class="active" href="kocsma.html"> Rólunk </a></li>
+          <li><a href="kave.html">Kávéfajták</a></li>
+          <li><a href="sutik.html">Sütemények</a></li>
+          <li id="connect"><a href="connect.html">Kapcsolat</a></li>
+        </ul>
+      </div>
+      <div id="hamburger-icon" onclick="togglemobilMenu(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <ul class="mobil-menu">
+          <li><a class="active" href="kocsma.html">Rólunk</a></li>
+          <li><a href="kave.html">Kávéfajták</a></li>
+          <li><a href="sutik.html">Sütemények</a></li>
+          <li id="connect"><a href="connect.html">Kapcsolat</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <h1 class="cim">Bemutatkozás</h1>
+      <article>
+        <figure>
+          <img class="balra" src="img/kreator-black-sunrise.jpg" alt="Black Sunrise Coffee">
+          <img class="jobbra" src="img/barista.jpg" alt="barista girl">
+        </figure>
+        <p>
+          <b class="inicial">E</b>lhivatott kávérajongókból álló csapat vagyunk,
+          akik a kivételes kávémárkákat és pörkölőket ünneplik azzal,
+          hogy egyedülálló lehetőséget biztosítanak vendégeinknek a
+          legmagasabb minőségű kávéitalok kipróbálására.
+        </p>
+        <p>
+          Minden tőlünk telhetőt megteszünk annak érdekében,
+          hogy minden egyes megrendelést a lehető leggyorsabban és
+          leghatékonyabban készítsünk el és szállítsunk ki kiváló vásárlóinknak a
+          minőség feláldozása nélkül.
+        </p>
+      </article>
+      <article>
+        <p class="middle" id="nyitva">
+          Örömmel mutatjuk be a Black Sunrise kávét, és meghívjuk Önt, hogy élvezze kávézónk egyedülálló barátságos
+          légkörét. Ha egy nagyszerű kávéra vágyik, örömmel fogja tudni, hogy valódi alternatívát kínálunk a kézműves
+          kávéval és eszpresszó italokkal.
+        </p>
+      </article>
+
+      <article class="doboz">
+        <h2>Nyitvatarási idő</h2>
+        <div class="sor" id="open">
+        </div>
+      </article>
+      <h2>Vendégeink a kávézónkról írták...</h2>
+      <div class="jcarousel-wrapper">
+        <div class="jcarousel">
+          <ul>
+            <li>
+              <img src="img/img1.jpg" alt="Ildi" title="Ildi">
+              <h3>Ildikó</h3>
+              <p>Múlt héten napközben a laptopommal ellátogattam a Kreator Coffee-ba, hogy elvégezhessem a saját munkámat,
+                és élvezhessem a kávézó hangulatát. Ez a hely tökéletes volt! A kávé nagyszerű volt, és a tiramisu pedig
+                fenséges. Mindenkinek ajánlom ezt a helyet.</p>
+            </li>
+            <li>
+              <img src="img/img2.jpg" alt="Piri" title="Piri">
+              <h3>Piroska</h3>
+              <p>Imádom a kávét és a hangulatot a kávézójában. A legtöbb hétfőn reggel ott vagyok egy találkozón. Amikor
+                megérkezek, mosolyogva fogadnak, és a Barista mindig szakít időt arra, hogy úgy készítse el a kávémat,
+                ahogy én szeretném. Kedvenc italom a Black Sunrise.</p>
+            </li>
+            <li>
+              <img src="img/img3.jpg" alt="Szilvi" title="Szilvi">
+              <h3>Szilvia</h3>
+              <p>Nagyon jól éreztük magunkat, pazar volt a Heavy Metal! Let there be rock! Köszönjük a profi kiszolgálást!
+              </p>
+            </li>
+            <li>
+              <img src="img/img4.jpg" alt="Leonidas" title="Leonidas">
+              <h3>Leonidas</h3>
+              <p>A minap próbáltam ki itt először a kávét. A hely rejtettnek tűnhet, de valójában nagyon könnyű megtalálni
+                a kávézót a térképen. Csak egy közepes normál kávét rendeltem, és nagyon jó volt. A hölgy, aki kiöntötte a
+                kávét, nagyon barátságos volt. Biztosan visszajövök!</p>
+            </li>
+            <li>
+              <img src="img/img5.jpg" alt="Jázmin" title="Jázmin">
+              <h3>Jázmin</h3>
+              <p>Csodálatos hely, pazar kiszolgálás, maradandó élmény volt itt ünnepelni a 2. évfordulóját annak, hogy
+                drága férjem megkérte a kezem.</p>
+            </li>
+            <li>
+              <img src="img/img6.jpg" alt="Botond" title="Botond">
+              <h3>Botond</h3>
+              Páratlan élmény volt az itt töltött néhány óra. A Kreator Coffee személyzetének rendkívüli figyelmessége,
+              kedvessége. A kávék és sütik, a kemény-rock színessége, igazan széppé varázsolta az eltöltött időt!
+              Köszönjük.
+            </li>
+          </ul>
+        </div>
+        <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+        <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+        <p class="jcarousel-pagination"></p>
+      </div>
+      <hr>
+      <h2>Galéria</h2>
+      <div class="kepsor">
+        <div class="imgoszlop" id="oszlop1"></div>
+        <div class="imgoszlop" id="oszlop2"></div>
+        <div class="imgoszlop" id="oszlop3"></div>
+        <div class="imgoszlop" id="oszlop4"></div>
+
+      </div>
+      <div class="modal">
+        <span class="bezar">&#10008;</span>
+        <img class="modalImage" id="img01" />
+        <p id="caption"></p>
+      </div>
+      <script>
+        document.querySelector(".bezar").addEventListener("click", () => {
+          modalElem.style.display = "none";
+        });
+      </script>
+      
+      <article class="doboz">
+      <h2>Tekintse meg videónkat</h2>
+        <div class="video">
+          <iframe class="responsive-iframe" src="https://www.youtube.com/embed/t8k71QcArnk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </article>      
+
+    </main>
+    <script defer src="js/footer.js"></script>
+    <footer id="app-footer"></footer>
+
+    <script src="js/script.js"></script>
+  </body>
+
+</html>

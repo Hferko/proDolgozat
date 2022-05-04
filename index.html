@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="canonical" href="https://hferko.github.io/proFeladat/" />
+        <meta name="description" content="A Kreator Coffee egy hangulatos hely, ahol a barátok találkoznak, hogy megosszák a kávét, süteményeket és könnyű ételeket.  - Finom s&uuml;tem&eacute;nyek &eacute;s italok bős&eacute;ges k&iacute;n&aacute;lat&aacute;val &eacute;s egy csipetnyi heavy metallal v&aacute;rjuk &Ouml;nt. T&eacute;rjen be hozz&aacute;nk, &eacute;s helyezze mag&aacute;t k&eacute;nyelembe k&aacute;v&eacute;z&oacute;nkban. Klimatiz&aacute;lt termeink gondoskodnak a kellemes tart&oacute;zkod&aacute;sr&oacute;l. Minden nap nyitva tartunk." />
+        <meta name="keywords" content="Kávézó, Kreator Coffee, Pajkaszeg, Heavy Metal, Kávé, Rendelkezésre áll, Vendéglátás, Légkondicionálás, Kerthelyiség, Saját parkolás, Elvitelre, Ingyenes wifi, Thrash-metal" />
+        <link rel="stylesheet" href="css/nav.css">
+        <link rel="stylesheet" href="css/intro.css">
+        <link rel="icon" type="image/x-icon" href="img/mug-hot-solid.svg">
+        <script src="js/jquery.min.js"></script>
+        <title>Kreator Coffee</title>
+
+        <script>
+            $(document).ready(function () {
+                $(".foldhozragadt").click(function () {
+                    $("html, body").animate({
+                        scrollTop: $("#top").offset().top - 0
+                    }, 3000)
+                });
+
+                /* Valahányszor görgetek lefele és a képernyő alja eléri a figyelt elem alját...*/
+                $(window).scroll(function () {
+                    /* Ellenőrizze az egyes 'border' osztályú cimkék helyét */
+                    $('.border').each(function (i) {
+                        let bottom_of_border = $(this).offset().top + $(this).outerHeight();
+                        let bottom_of_window = $(window).scrollTop() + $(window).height();
+
+                        /* Ha az objektum teljesen látható az ablakban, lassan ússzon be jobbról és növelje meg a betűméretet*/
+                        if (bottom_of_window > bottom_of_border) {
+                            $(this).animate({ left: '0' }, "slow");
+                            $(this).animate({ fontSize: '3vw' }, "slow");
+                        }
+                    });
+                });
+            });
+
+        </script>
+    </head>
+
+    <body>
+        <div id="top"></div>
+        <nav>
+            <div id="brand">
+                <a href="index.html"><img src="img/kreatorIcon.png" alt="Kreator">
+                    <img src="img/coffee-bean.svg" height="30px" alt="Coffee"></a>
+            </div>
+            <div class="menu" style="margin-top: -30px;">
+                <ul>
+                    <li><a href="kocsma.html"> Rólunk </a></li>
+                    <li><a href="kave.html">Kávéfajták</a></li>
+                    <li><a href="sutik.html">Sütemények</a></li>
+                    <li id="connect"><a href="connect.html">Kapcsolat</a></li>
+                </ul>
+            </div>
+            <div id="hamburger-icon" onclick="togglemobilMenu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+                <ul class="mobil-menu">
+                    <li><a class="active" href="kocsma.html">Rólunk</a></li>
+                    <li><a href="kave.html">Kávéfajták</a></li>
+                    <li><a href="sutik.html">Sütemények</a></li>
+                    <li id="connect"><a href="connect.html">Kapcsolat</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="top"></div>
+        <div class="bgimg-1">
+            <h1>Üdvözöljük a Kreator Coffee honlapján !</h1>
+            <div class="caption">
+                <span class="border"> <a href="kocsma.html">Thrash-metal coffee</a> </span>
+            </div>
+        </div>
+
+        <article class="elso">
+            <h3>Bemutatkozás</h3>
+            <p> <b class="inicial">T</b>érjen be hozzánk, és helyezze magát kényelembe kávézónkban. Ez az igazi hétvégi
+                hangulat. Mindegy, hogy barátokkal, családjával vagy egyedül egy könyvvel látogat el hozzánk, a Creator
+                Coffee mindig szeretettel látja. Élvezze a napsütést varázslatos kültéri helyiségünkben. Klimatizált bárunk
+                és a visszafogott rock zene gondoskodnak a kellemes tartózkodásról. </p>
+            <h4> A Kreator Coffee egy hangulatos hely, ahol a barátok találkoznak, hogy megosszák a kávét, süteményeket és könnyű ételeket.
+            </h4>
+            </p>
+            <p><i>"Van a kávé... A fekete. Olyan, mint az élet. Sötét és keserű. És van a kávéház. Ahol nem a kávé a
+                    legfontosabb,
+                    hanem a találkozás. A beszélgetés. Két ember beszél, beszél, beszél, és egy napon a kávé más értelmet
+                    nyer.
+                    Átalakul érzelmekké. Többé már nem egyszerű kávé, hanem barátság, szeretet, vagy éppen szerelem. Az
+                    iránt,
+                    akivel
+                    a kávézás élményét az ember megosztja. Attól kezdve minden csésze kávé ezt jelenti. A másikat. Még akkor
+                    is,
+                    ha
+                    nincs jelen. Emléke, emlékeztetője lesz. És ekkor már nem sötét, és nem keserű." </i></p>
+            <p class="jobbra">Csitáry-Hock Tamás</p>
+            <p>Tekintse meg nyitvatarásunkat:</p>
+        </article>
+
+        <div class="bgimg-2">
+            <div class="caption">
+                <span class="border"><a href="kocsma.html#nyitva"> NYITVATARÁSUNK</a></span>
+            </div>
+        </div>
+
+        <article class="masodik">
+            <p>A Black Sunrise Coffee a Specialty Kávék kategóriájába tartozik.
+                Mindössze a világ kávétermelésének 5%-a tartozik ebbe a felső kategóriába.</p>
+            <p>Ezek jellemzően egyedi, azonosítható területekről
+                (ún. egyedi terroirról) származó, kézzel szüretelt,
+                gondosan válogatott kávék.
+                Másrészt a németországi pörkölés és az elkészítés módja is megkülönböztetett
+                figyelemmel történik, ahol fontos, hogy a pörkölés ne írja felül
+                a kávé fajta és termőhelyi egyediségét, valamint ízjegyeit. </p>
+            <p><i> "Ma már úgy vagyok vele, hogy nem látok túl nagy különbséget a kávéházi apostol világmegváltó eszméi s
+                    egy új
+                    kormányprogram között."</i></p>
+            <p class="jobbra">Karinthy Frigyes</p>
+            <p>Foglaljon asztalt nálunk:</p>
+        </article>
+
+        <div class="bgimg-3">
+            <div class="caption">
+                <span class="border"><a href="connect.html#foglal"> ASZTALFOGLALÁS</a></span>
+            </div>
+        </div>
+
+        <div style="position:relative;">
+            <article class="elso">
+                <p>"Egy népes kávéház is van olyan érdekes, mint az Atlanti-óceán vagy a Szahara, vagy a Kárpátok
+                    fenyőerdői.
+                    Igen, egyetlen ember, mikor megmutatja lényét és elárulja titkát, érdekesebb, mint a Mont Blanc."</p>
+                <p class="jobbra">Márai Sándor</p>
+                <p>Tekintse meg kávé választékunkat:</p>
+            </article>
+        </div>
+
+        <div class="bgimg-1">
+            <div class="caption">
+                <span class="border"><a href="kave.html"> KÁVÉINK</a></span>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <h3>Kreator - a thrash-metal kávézó</h3>
+                <p>Itt olvasható az &nbsp;&nbsp; <a href="gdpr.html"> Adatkezelési szabályzatunk</a></p>
+                <ul class="socials">
+                    <li><img src="img/phone.svg"> +36 30 444 55 66</li>
+                    <li><img src="img/envelope.svg"> 2508. Pajkaszeg, Pf. 12. </li>
+                    <li><img src="img/map.svg"> Szélesség: 46.2137; Hosszúság: 20.4755</li>
+                    <li><img src="img/email.svg"> kreator.coffee@acme.com</li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p> © 2022 &#8460;&Fscr;erko &Mscr;űvek </p>
+            </div>
+        </footer>
+
+        <div class="foldhozragadt">
+            <a href="#top"><img src="img/arrow.svg"></a>
+
+        </div>
+
+        <script>
+            function togglemobilMenu(menu) {
+                menu.classList.toggle('nyit');
+            }
+        </script>
+    </body>
+
+</html>

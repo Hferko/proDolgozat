@@ -1,0 +1,144 @@
+/* A kártyák (kávéfajták, sütemények) Modaljai*/
+.overlay {    
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 20, 0.6);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;          
+  }
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;      
+}  
+
+.popup { 
+    z-index: 1;       
+    margin-top: 50vh;
+    margin-left: 1vw;
+    padding: 10px;
+    /*background: beige;*/
+    background: linear-gradient(to right, #ffc680  0%, beige 100%);
+    color: #222;
+    border-radius: 8px;
+    border: 2px solid teal;
+    width: 86%;
+    position: relative;
+    transition: all 5s ease-in-out;
+    animation: animatezoom 4s;  
+    
+  }
+  
+  @keyframes animatezoom{
+    from{transform:scale(0)} to{transform:scale(1)}
+  }
+
+  .popup .header{
+      background-color: #ccb182;
+      margin-top: -2px;
+      margin-right: -4px;
+      padding-left: 4px;
+  }
+
+  .popup h2 {
+    margin-top: 0;
+    color: navy;  
+    font-size: 1.5rem;  
+    padding-left: 20px;
+    
+    font-variant: small-caps;
+  }
+
+  .popup p{
+    font-family: 'Lucida Sans', sans-serif;
+    font-size: 1rem;
+  }
+
+  .popup .close {
+    position: absolute;
+    top: -3px;
+    right: 10px;
+    transition: all 200ms;
+    font-size: 2.6rem;    
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: red;
+  }
+
+  .popup img{
+    float: left;
+    margin-right: 10px;
+    width: 30%;
+    border-bottom-left-radius: 12px;
+  }
+
+  .popup .content {
+    /*max-height: 30%;*/
+    overflow: auto;
+    margin-top: 10px;
+  }
+  
+  .popup .jobbra{
+    text-align: right;
+    margin-top: 5px;
+  }
+  .popup .button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: teal;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 1rem;
+    padding: 5px 20px;
+    width: 250px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .popup .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .popup .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .popup .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .popup .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  @media screen and (max-width: 940px){ 
+    .popup{
+      width: 90%;
+    }  
+    .popup p, .popup .button{
+      font-size: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 466px){ 
+    .popup{
+      bottom: 50px;
+    }
+  }  
