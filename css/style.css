@@ -134,7 +134,7 @@ article::after {
   width: 100%;
   height: auto;
   overflow: hidden;
-  padding-top: 56.25%;   
+  padding-top: 5%;   
 }
 
 .responsive-iframe {
